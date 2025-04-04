@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lời Tỏ Tình</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .question {
+            font-size: 20px;
+            color: darkmagenta;
+            margin-bottom: 20px;
+        }
+        .btn {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+        }
+        .yes {
+            background-color: lightgreen;
+            color: darkgreen;
+        }
+        .no {
+            background-color: lightcoral;
+            color: darkred;
+        }
+        .link {
+            font-size: 14px;
+            color: blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="question">Em có đồng ý làm người yêu anh không? 💖</div>
+    <button class="btn yes" onclick="yesClicked()">Có ❤️</button>
+    <button class="btn no" onmouseover="moveButton()">Không 😢</button>
+    <div class="link" onclick="showMessage()">Nhấn vào đây để nói lời yêu 💌</div>
+
+    <script>
+        function yesClicked() {
+            alert("Anh yêu em nhiều lắm! ❤️");
+        }
+
+        function moveButton() {
+            var noButton = document.querySelector('.no');
+            var x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            var y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+            noButton.style.position = 'absolute';
+            noButton.style.left = x + 'px';
+            noButton.style.top = y + 'px';
+        }
+
+        function showMessage() {
+            alert("Anh đã chuẩn bị một bất ngờ cho em! ❤️");
+        }
+    </script>
+</body>
+</html>
